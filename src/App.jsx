@@ -31,16 +31,15 @@ function App() {
       document.body.style.color='white';
       newbtnText("Enable Light Mode");
       showAlert("Dark Mode has been Enable", "success");
-      setInterval( () => {
-        document.title = 'B.Sc.IT';
-      },1500);
-
+      // document.title = "Dark Mode";
     } else {
       setMode('light');
       document.body.style.background='white';
       document.body.style.color='black';
       newbtnText("Enable Dark Mode");
       showAlert("Light Mode has been Enable", "success")
+      // document.title = "Dark Mode";
+
     }
   }
 
@@ -58,9 +57,9 @@ function App() {
   }
   return (
     <>
-      <Navbar title='SIT' aboutText="Contact Us" mode={mode} toggleMode = {toggleMode} btntext={btnText}/>
+      <Navbar title='Text Mechanic' aboutText="Contact Us" mode={mode} toggleMode = {toggleMode} btntext={btnText}/>
       <Alert alert={alert}/>
-      <Textform heading="Enter Your Text To Analyse Below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}></Textform>
+      <Textform heading="Repair Your Text Here" mode={mode} toggleMode={toggleMode} showAlert={showAlert}></Textform>
 
    </>
   );
